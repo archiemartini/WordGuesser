@@ -12,4 +12,9 @@ public class GameTest {
     Game game = new Game("MAKERS");
     assertEquals(game.getWordToGuess(), "M_____");
   }
+
+  @Test public void testHasInitialCounter10() {
+    Game game = new Game("MAKERS");
+    assertEquals(game.counter, Integer.valueOf(10));
+  }
 }
