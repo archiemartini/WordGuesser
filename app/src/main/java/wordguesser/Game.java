@@ -17,9 +17,15 @@ public class Game {
         return str.toString();
     }
 
+    public Integer getRemainingAttempts() {
+        return counter;
+    }
+
     String word;
+    Integer counter;
     Game(String chosenWord) {
         word = chosenWord;
+        counter = 10;
     }
 
     public static void main(String[] args) { }
