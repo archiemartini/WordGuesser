@@ -4,8 +4,16 @@
 package wordguesser;
 
 public class Game {
+
     public String getWordToGuess() {
-        return "B_____";
+        Character firstLetter = word.charAt(0);
+        String blank = "_____";
+        return firstLetter+blank;
+    }
+
+    String word;
+    Game(String chosenWord) {
+        word = chosenWord;
     }
 
     public static void main(String[] args) { }
