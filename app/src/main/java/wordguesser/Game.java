@@ -6,9 +6,15 @@ package wordguesser;
 public class Game {
 
     public String getWordToGuess() {
-        Character firstLetter = word.charAt(0);
-        String blank = "_____";
-        return firstLetter+blank;
+        StringBuilder str = new StringBuilder();
+        for (int i = 0; i < word.length(); i++) {
+            Character currentLetter = word.charAt(0);
+            if (i == 0) {
+                str.append(currentLetter);
+            } 
+            str.append("_");
+        } 
+        return str.toString();
     }
 
     String word;
