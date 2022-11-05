@@ -5,6 +5,14 @@ package wordguesser;
 
 public class Game {
 
+    static final String[] DICTIONARY={"BAZINGA", "CHERRY", "PUMPKIN", "PISTACHIO", "GUMPTION", "GIRTH", "FLANGE"};
+    String word;
+    Integer counter;
+    Game(String chosenWord) {
+        word = chosenWord;
+        counter = 10;
+    }
+
     public String getWordToGuess() {
         StringBuilder str = new StringBuilder();
         for (int i = 0; i < this.word.length(); i++) {
@@ -21,12 +29,6 @@ public class Game {
         return counter;
     }
 
-    String word;
-    Integer counter;
-    Game(String chosenWord) {
-        word = chosenWord;
-        counter = 10;
-    }
 
     public static void main(String[] args) { }
 }
