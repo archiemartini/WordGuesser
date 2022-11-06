@@ -3,21 +3,17 @@
  */
 package wordguesser;
 
-import java.util.Random;
-
 public class Game {
 
     static final String[] DICTIONARY={"BAZINGA", "CHERRY", "PUMPKIN", "PISTACHIO", "GUMPTION", "GIRTH", "FLANGE"};
+    
+    WordChooser wordChooser;
     String word;
     Integer counter;
-    Game(String chosenWord) {
-        word = this.getRandomWordFromDictionary();
+    Game(WordChooser wordChooser) {
+        wordChooser = new WordChooser();
+        word = this.wordChooser.getRandomWordFromDictionary();
         counter = 10;
-    }
-
-    public String getRandomWordFromDictionary() {
-        Random rand = new Random();
-        return DICTIONARY[rand.nextInt(DICTIONARY.length)];
     }
 
     public String getWordToGuess() {

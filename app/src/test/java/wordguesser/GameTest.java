@@ -9,17 +9,20 @@ import org.junit.Test;
 
 public class GameTest {
   @Test public void testGetsWordToGuess() {
-    Game game = new Game("MAKERS");
+    WordChooser wordChooser = new WordChooser();
+    Game game = new Game(wordChooser);
     assertEquals(game.getWordToGuess(), "M_____");
   }
 
   @Test public void testHasInitialCounter10() {
-    Game game = new Game("MAKERS");
+    WordChooser wordChooser = new WordChooser();
+    Game game = new Game(wordChooser);
     assertEquals(game.counter, Integer.valueOf(10));
   }
 
   @Test public void testGetRemainingAttempts() {
-    Game game = new Game("MAKERS");
+    WordChooser wordChooser = new WordChooser();
+    Game game = new Game(wordChooser);
     assertEquals(game.getRemainingAttempts(), Integer.valueOf(10));
   }
 
