@@ -31,7 +31,5 @@ public class Game {
     public Integer getRemainingAttempts() {
         return counter;
     }
-
-
     public static void main(String[] args) { }
 }
